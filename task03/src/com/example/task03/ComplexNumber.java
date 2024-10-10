@@ -20,12 +20,12 @@ public class ComplexNumber
         this.real = real;
     }
 
-    public double getImag()
+    public double getImage()
     {
         return image;
     }
 
-    public void setImag(double image)
+    public void setImage(double image)
     {
         this.image = image;
     }
@@ -33,17 +33,17 @@ public class ComplexNumber
     public ComplexNumber add(ComplexNumber complexNum)
     {
         double newReal = this.real + complexNum.getReal();
-        double newImag = this.image + complexNum.getImag();
+        double newImage = this.image + complexNum.getImage();
 
-        return new ComplexNumber(newReal, newImag);
+        return new ComplexNumber(newReal, newImage);
     }
 
     public ComplexNumber multiply(ComplexNumber complexNum)
     {
-        double newReal = real * complexNum.getReal() - image * complexNum.getImag();
-        double newImag = real * complexNum.getImag() + image * complexNum.getReal();
+        double newReal = real * complexNum.getReal() - image * complexNum.getImage();
+        double newImage = real * complexNum.getImage() + image * complexNum.getReal();
 
-        return new ComplexNumber(newReal, newImag);
+        return new ComplexNumber(newReal, newImage);
     }
 
     public String toString()
